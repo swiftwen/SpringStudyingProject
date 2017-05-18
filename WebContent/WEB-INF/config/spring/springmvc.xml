@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc    
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+        
+    <!-- 这段放在最前面,以后只要遇到一些稀奇古怪的浏览器不兼容中文编码，导致乱码问题，就查看返回的ContentType数据格式类型，然后在后面将其配置为UTF-8 -->
+    <!-- 如果不配置，则使用默认的处理器和映射器，默认加载很多的参数绑定方法，比如json转换解析器就默认加载了 -->
+	<mvc:annotation-driven>
+	    
+	</mvc:annotation-driven>    
+	<!-- 扫描mvc controller目录 -->
+	<context:component-scan base-package="com.wp.controller" />
+	 <!-- 关联interceptor配置
+	<import resource="applicationContext-interceptor.xml"/> -->
+</beans>

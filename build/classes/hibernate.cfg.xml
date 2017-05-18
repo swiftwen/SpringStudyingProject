@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+
+<!-- 各属性的配置-->
+
+<!—为true表示将Hibernate发送给数据库的sql显示出来 -->
+
+<property name="show_sql">true</property>
+
+<!-- SQL方言，这边设定的是MySQL -->
+
+<property name="dialect">net.sf.hibernate.dialect.MySQLDialect</property>
+
+<!-- 一次读的数据库记录数 -->
+
+<property name="jdbc.fetch_size">50</property>
+
+<!-- 设定对数据库进行批量删除 -->
+        <property name="jdbc.batch_size">30</property>
+
+
+
+<property name="dialect">net.sf.hibernate.dialect.SQLServerDialect</property>
+
+<!—映射文件 -->
+
+
+    </session-factory>
+</hibernate-configuration>
